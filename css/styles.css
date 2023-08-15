@@ -696,6 +696,7 @@ button {
   transform: translate(-50%, -50%) scale(1);
   width: 408px;
   min-height: 584px;
+  padding: 72px 24px 24px 24px;
 
   background: var(--Dairy);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -739,7 +740,6 @@ button {
 }
 
 .call-back-form-headline-text {
-  margin-top: 72px;
   margin-bottom: 16px;
 
   color: var(--navyblue, #2E2F42);
@@ -747,16 +747,9 @@ button {
   font-weight: 500;
 }
 
-.call-back-form {
-  margin-left: 24px;
-  margin-right: 24px;
-  margin-bottom: 16px;
-}
-
 .call-back-form-label {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+  display: block;
+  margin-bottom: 4px;
 
   color: var(--lightslate, #8E8F99);
   font-size: 12px;
@@ -769,11 +762,38 @@ button {
   width: 100%;
   padding-left: 38px;
 
-  font-size: 18px;
-
+  background-color: transparent;
   border-radius: 4px;
   border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.40));
+  outline: transparent;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.call-back-form-input:focus {
+  border: 1px solid #4D5AE5;
+}
+
+.call-back-form-input-wrapper {
+  position: relative;
+}
+
+.call-back-form-input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* .call-back-form-input:focus .call-back-form-input-icon {
+  fill: var(--Iris);
+} */
+
+
+
+
 
 .call-back-form-textarea {
   padding: 8px 16px;
@@ -784,20 +804,11 @@ button {
   border: 1px solid var(--navyblue-modal, rgba(46, 47, 66, 0.40));
 }
 
-.call-back-form-input:hover,
-.call-back-form-input:focus {
-  border: 1px solid #4D5AE5;
-}
-
 .call-back-form-textarea:hover,
 .call-back-form-textarea:focus {
   border: 1px solid #4D5AE5;
 }
 
-.call-back-form-label:hover .call-back-form-input-icon,
-.call-back-form-label:focus .call-back-form-input-icon {
-  fill: var(--Iris);
-}
 
 .call-back-form-checkbox-wrapper {
   display: flex;
@@ -819,9 +830,6 @@ button {
   color: var(--Iris);
 }
 
-.call-back-form-input-wrapper:not(:last-child) {
-  margin-bottom: 8px;
-}
 
 .call-back-form-submit-btn {
   display: block;
@@ -842,12 +850,3 @@ button {
   letter-spacing: 0.04em;
 }
 
-.call-back-form-input-wrapper {
-  position: relative;
-}
-
-.call-back-form-input-icon {
-  position: absolute;
-  top: 26px;
-  left: 16px;
-}
