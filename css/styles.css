@@ -774,6 +774,10 @@ button {
   border: 1px solid #4D5AE5;
 }
 
+.call-back-form-item-wrapper {
+  margin-bottom: 8px;
+}
+
 .call-back-form-input-wrapper {
   position: relative;
 }
