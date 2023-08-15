@@ -791,9 +791,9 @@ button {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* .call-back-form-input:focus .call-back-form-input-icon {
+.call-back-form-input:focus .call-back-form-input-icon {
   fill: var(--Iris);
-} */
+}
 
 .call-back-form-comment-item-wrapper {
   margin-bottom: 16px;
