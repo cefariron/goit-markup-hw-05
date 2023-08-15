@@ -809,7 +809,7 @@ button {
   color: var(--Iris);
 }
 
-.call-back-form-label:not(:last-child) {
+.call-back-form-input-wrapper:not(:last-child) {
   margin-bottom: 8px;
 }
 
@@ -838,6 +838,6 @@ button {
 
 .call-back-form-input-icon {
   position: absolute;
-  top: 8px;
+  top: 26px;
   left: 16px;
 }
